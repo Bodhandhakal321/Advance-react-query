@@ -38,7 +38,7 @@ function Products() {
         staleTime: 20000
     });
 
-    const handleMove= (moveCount)=>{
+    const handleMoved= (moveCount)=>{
       // skip = 0 moveCount = 4 or -4 
       // for next page 4+4= 8 
 
@@ -141,14 +141,14 @@ function Products() {
                         <button
                         disabled={skip < limit}
                             className="bg-purple-500 px-4 py-1 text-white rounded"
-                            onClick={()=> {handleMove(-limit)} }>
+                            onClick={()=> {handleMoved(-limit)} }>
                             Prev
                         </button>
                         <button
                         //pagination done
                         disabled={limit + skip >= products?.total}
                             className="bg-purple-500 px-4 py-1 text-white rounded"
-                            onClick={()=> {handleMove(limit)} }>
+                            onClick={()=> {handleMoved(limit)} }>
                             Next
                         </button>
                     </div>
